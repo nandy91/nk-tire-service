@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.util.UUID;
 
 @RestController
@@ -13,7 +14,7 @@ import java.util.UUID;
 public class TireController {
 
     @GetMapping("/{tireId}")
-    public ResponseEntity<TireDto> getTireById(UUID tireId){
+    public ResponseEntity<TireDto> getTireById(@PathVariable("tireId") UUID tireId){
         //todo
         return new ResponseEntity<>(TireDto.builder().build(), HttpStatus.OK);
 
